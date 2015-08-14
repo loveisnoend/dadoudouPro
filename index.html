@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-resourceroots='{"com.zhenergy.bo": "./"}'
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+		
+		<script type="text/javascript" src="cordova.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/personalinfoStyle.css">
+		<script src="echarts-2.2.7/build/dist/echarts.js"></script>
+		<script>
+    		require.config({
+                paths: {
+                    echarts: 'echarts-2.2.7/build/dist'
+                }
+            });
+            function doit1(evt){
+		        app.to("idhome","show");
+            }
+            function doit2(evt){
+		        app.to("idperformance","show");
+            }
+        </script>
+		<script type="text/javascript">
+		  /*=====================================================================
+		   The following onError function is used to trap any errors that occur
+		   while the application is running. Cordova fails silently whenever it
+		   encounters an error in HTML or JavaScript code. So, with that being
+		   the case, developers cannot tell when/why their applications are
+		   failing. Any code error will cause the function to fire and display
+		   the error in an alert dialog.
+		   ======================================================================*/
+		  window.onerror = function(msg, url, line) {
+			var idx = url.lastIndexOf("/");
+			if (idx > -1) {
+			  url = url.substring(idx + 1);
+			}
+			alert("ERROR in " + url + " (line #" + line + ")\n" + msg);
+			console.error(msg);
+			return false;
+		  };
+		</script>
+		
+		<script type="text/javascript" src="logon.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+		
+		<script>
+				function getUrlParameterName(sParam)
+				{
+					var sPageURL = window.location.search.substring(1);
+					var sURLVariables = sPageURL.split('&');
+					for (var i = 0; i < sURLVariables.length; i++) 
+					{
+						var sParameterName = sURLVariables[i].split('=');
+						if (sParameterName[0] === sParam) 
+						{
+							return true;
+						}
+					}
+					return false;
+				} 
+			
+			
+				sap.ui.localResources("view");
+				var app = new sap.m.App({initialPage:"idhome"});
+				
+				function startApp(context) {
+				    
+				    setModel();
+		
+		            //首页
+					var home = sap.ui.view({id:"idhome", viewName:"com.zhenergy.bo.view.home", type:sap.ui.core.mvc.ViewType.HTML  });
+					app.addPage(home);
+					
+					//经验业绩
+					var performance = sap.ui.view({id:"idperformance", viewName:"com.zhenergy.bo.view.performance", type:sap.ui.core.mvc.ViewType.HTML  });
+					app.addPage(performance);
+					
+					app.to(home);
+					app.placeAt("content");
+		
+				}
+				function setModel(){
+				    var oModel;
+            		if(window.cordova && appContext && !window.sap_webide_companion) {
+            			var url = appContext.applicationEndpointURL + "/";
+            			var oHeader = {"X-SMP-APPCID":appContext.applicationConnectionId};
+            			if (appContext.registrationContext.user) {
+            				oHeader["Authorization"] = "Basic "+btoa(appContext.registrationContext.user + ":" + appContext.registrationContext.password);
+            			}
+            			oModel = new sap.ui.model.odata.ODataModel(url, true, null, null, oHeader);
+            			sap.ui.getCore().setModel(oModel);
+            		} else {
+            			var sServiceUrl = "/sap/opu/odata/sap/ZBILLYBWDTEST06_SRV/";
+                        oModel = new sap.ui.model.odata.ODataModel(sServiceUrl, true);
+                        sap.ui.getCore().setModel(oModel);
+            		}
+
+            		// set i18n model
+            		var i18nModel = new sap.ui.model.resource.ResourceModel({
+            			bundleUrl : "./i18n/messageBundle.properties"
+            		});
+            		sap.ui.getCore().setModel(i18nModel, "i18n");
+            		
+            		// set device model 
+            		var deviceModel = new sap.ui.model.json.JSONModel({
+            			isPhone : jQuery.device.is.phone,
+            			isNoPhone : !jQuery.device.is.phone,
+            			listMode : (jQuery.device.is.phone) ? "None" : "SingleSelectMaster",
+            			listItemType : (jQuery.device.is.phone) ? "Active" : "Inactive"
+            		});
+            		deviceModel.setDefaultBindingMode("OneWay");
+            		sap.ui.getCore().setModel(deviceModel,"device");
+				}
+				if (window.cordova || getUrlParameterName("companionbuster")) {
+					devapp.initialize();
+				}
+				else {
+					startApp();
+				}
+		</script>
+		
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
+	
+
+
+

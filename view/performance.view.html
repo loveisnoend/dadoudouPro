@@ -1,0 +1,131 @@
+<template data-controller-name="com.zhenergy.bo.view.performance">
+	<div class="nav_left">
+        <div class="but01">
+            <button class="But01" type="button"  onClick="doit1()"></button>
+        </div>
+        <div class="but02" id="nav_BI02">
+            <button class="But02" type="button"  onClick="doit2()"></button>
+        </div>
+        <div class="but03">
+            <button class="But03" type="button"  onClick="doit3()"></button>
+        </div>
+    </div>
+    <div id="main" class="main">
+        <div class="page_title">
+            <div class="inner" style="height: 140px; line-height: 140px; width: 730px; margin: auto;">
+                <div class="panel left">
+                    <div style="width: 0px; height: 120px; float: right;">
+                        <div class="hand_triangle hand_cut_left">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div>
+                            <div class="panel_title">收入（亿元）</div>
+                            <div id="sr_num" class="panel_num">
+                            </div>
+                            <div id='sr_prec' class="panel_desc">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="triangle left_triangle"></div>
+                </div>
+                <div class="panel middle">
+                    <div style="width: 0px; height: 120px; float: left;">
+                        <div class="hand_triangle hand_left">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div>
+                            <div class="panel_title">日利润（亿元）</div>
+                            <div id="rlr_num" class="panel_num">
+                                
+                            </div>
+                            <div id='rlr_prec' class="panel_desc">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div style="width: 0px; height: 120px; float: right;">
+                        <div class="hand_triangle hand_right">
+                        </div>
+                    </div>
+                </div>
+                <div class="panel right">
+                    <div style="width: 0px; height: 120px; float: left;">
+                        <div class="hand_triangle hand_cut_right">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="">
+                            <div class="panel_title">成本（亿元）</div>
+                            <div id="cb_num" class="panel_num">
+                                
+                            </div>
+                            <div id='cb_prec' class="panel_desc">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="triangle right_triangle"></div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+        <div class="page_content">
+            <div class="panel left">
+                <div style="height: 10px">
+                    <div class="triangle left_triangle cut"></div>
+                </div>
+                <div class="title">
+                    上网电量
+                    
+                </div>
+                <div class="content">
+                    <div id="swdl" class="line" style="width: 355px; height: 175px">
+                    </div>
+                </div>
+                <div style="position: absolute; bottom: 0; height: 0px;width: 355px;">
+                <div class="triangle left_triangle"></div></div>
+            </div>
+            <div class="panel right">
+                <div style="height: 10px">
+                    <div class="triangle right_triangle cut "></div>
+                </div>
+                <div class="title">
+                    燃料成本
+                </div>
+                <div class="content">
+                    <div id="rlcb" class="line" style="width: 355px; height: 175px">
+                    </div>
+                </div>
+                <div style="position: absolute; bottom: 0; height: 0px;width: 355px;">
+                <div class="triangle right_triangle"></div></div>
+            </div>
+            <div class="panel left">
+                <div style="height: 10px">
+                    <div class="triangle left_triangle cut"></div>
+                </div>
+                <div class="title">
+                    平均上网电价
+                </div>
+                <div class="content">
+                    <div id="pjswdj" class="line" style="width: 355px; height: 175px">
+                    </div>
+                </div>
+
+            </div>
+            <div class="panel right">
+                <div style="height: 10px">
+                    <div class="triangle right_triangle cut "></div>
+                </div>
+                <div class="title">
+                    其他成本
+                </div>
+                <div class="content">
+                    <div id="qtcb" class="line" style="width: 355px; height: 175px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

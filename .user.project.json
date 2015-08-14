@@ -1,0 +1,28 @@
+{
+  "run": [
+    {
+      "filePath": "/zhenergybo/index.html",
+      "previewMode": 0,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "urlParameters": [],
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 615401,
+        "displayName": "New Web Application  1"
+      }
+    },
+    {
+      "filePath": "/zhenergybo/view/performance.view.html",
+      "previewMode": 0,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "urlParameters": [],
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 4033428,
+        "displayName": "New Web Application  1"
+      }
+    }
+  ]
+}
