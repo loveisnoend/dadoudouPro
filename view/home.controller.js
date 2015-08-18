@@ -1,38 +1,148 @@
 sap.ui.controller("com.zhenergy.bo.view.home", {
+		onInit: function() {
+            this.loadChart();
+		},
 
-/**
-* Called when a controller is instantiated and its View controls (if available) are already created.
-* Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
-* @memberOf com.zhenergy.bo.view.home
-*/
-//	onInit: function() {
-//
-//	},
+		loadChart: function() {
+			require(
+            [
+                'echarts',
+                'echarts/chart/pie'
+            ],
+				draw);
 
-/**
-* Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
-* (NOT before the first rendering! onInit() is used for that one!).
-* @memberOf com.zhenergy.bo.view.home
-*/
-//	onBeforeRendering: function() {
-//
-//	},
+			function draw(e) {
+				drawpie01(e);
+				drawpie02(e);
+				drawpie03(e);
+			}
+			//折线通用
+			function drawpie01(e) {
+				var c = e.init(document.getElementById("home_div02_div01_div01"));
+				var option = {
+					series: [
+						{
+							name: '访问来源',
+							type: 'pie',
+							radius: ['50%', '70%'],
+							itemStyle: {
+								normal: {
+									label: {
+										show: false
+									},
+									labelLine: {
+										show: false
+									}
+								},
+								emphasis: {
+									label: {
+										show: true,
+										position: 'center',
+										textStyle: {
+											fontSize: '30',
+											fontWeight: 'bold'
+										}
+									}
+								}
+							},
+							data: [
+								{
+									value: 335,
+								},
+								{
+									value: 310,
+								},
 
-/**
-* Called when the View has been rendered (so its HTML is part of the document). Post-rendering manipulations of the HTML could be done here.
-* This hook is the same one that SAPUI5 controls get after being rendered.
-* @memberOf com.zhenergy.bo.view.home
-*/
-//	onAfterRendering: function() {
-//
-//	},
+                            ]
+                        }
+                    ]
+				};
+				c.setOption(option);
+			}
+			function drawpie02(e) {
+				var c = e.init(document.getElementById("home_div02_div01_div02"));
+				var option = {
+					series: [
+						{
+							name: '访问来源',
+							type: 'pie',
+							radius: ['50%', '70%'],
+							itemStyle: {
+								normal: {
+									label: {
+										show: false
+									},
+									labelLine: {
+										show: false
+									}
+								},
+								emphasis: {
+									label: {
+										show: true,
+										position: 'center',
+										textStyle: {
+											fontSize: '30',
+											fontWeight: 'bold'
+										}
+									}
+								}
+							},
+							data: [
+								{
+									value: 335,
+								},
+								{
+									value: 310,
+								},
 
-/**
-* Called when the Controller is destroyed. Use this one to free resources and finalize activities.
-* @memberOf com.zhenergy.bo.view.home
-*/
-//	onExit: function() {
-//
-//	}
+                            ]
+                        }
+                    ]
+				};
+				c.setOption(option);
+			}
+			function drawpie03(e) {
+				var c = e.init(document.getElementById("home_div02_div01_div03"));
+				var option = {
+					series: [
+						{
+							name: '访问来源',
+							type: 'pie',
+							radius: ['50%', '70%'],
+							itemStyle: {
+								normal: {
+									label: {
+										show: false
+									},
+									labelLine: {
+										show: false
+									}
+								},
+								emphasis: {
+									label: {
+										show: true,
+										position: 'center',
+										textStyle: {
+											fontSize: '30',
+											fontWeight: 'bold'
+										}
+									}
+								}
+							},
+							data: [
+								{
+									value: 335,
+								},
+								{
+									value: 310,
+								},
 
-});
+                            ]
+                        }
+                    ]
+				};
+				c.setOption(option);
+			}
+			
+		}
+		});

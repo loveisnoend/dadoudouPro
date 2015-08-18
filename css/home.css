@@ -1,0 +1,228 @@
+.home{
+    width:944px;
+    height:768px;
+    background-color:RGB(52,77,102);
+    float:left;
+}
+.home_div01
+{
+    width:550px;
+    height:215px;
+    margin:20px;
+    background-color:RGB(38,57,77);
+    float:left;
+}
+    .home_div01_div01
+    {
+        width:200px;
+        height:215px;
+        float:left;
+    }
+    .home_div01_div02
+    {
+        width:150px;
+        height:215px;
+        background-color:RGB(31,41,51);
+        float:left;
+    }
+    .home_div01_div03
+    {
+        width:200px;
+        height:215px;
+        float:left;
+    }
+        .home_div01_div01_div01
+        {
+            width:170px;
+            height:20px;
+            margin-top:45px;
+            margin-left:30px;
+            border-left: solid #FFF;
+        }
+        .home_div01_h3
+        {
+            padding-left:10px;
+            color:white;
+            font-family:微软雅黑;
+        }
+        .home_div01_div01_div02
+        {
+            width:170px;
+            height:50px;
+            margin-top:30px;
+            margin-left:30px;
+        }
+        .home_div01_h1
+        {
+            color:white;
+            font-family:微软雅黑;
+            font-size:40px;
+        }
+        .home_div01_div01_div03
+        {
+            width:170px;
+            height:20px;
+            margin-top:10px;
+            margin-left:30px;
+        }
+        .home_div01_h4
+        {
+            color:white;
+            font-family:微软雅黑;
+            font-size:20px;
+        }
+        #home_div01_red01 
+        {
+            color:red;
+            font-family:微软雅黑;
+            font-size:40px;
+        }
+        #home_div01_red02 
+        {
+            color:red;
+            font-family:微软雅黑;
+            font-size:20px;
+        }
+.home_div02
+{
+    width:334px;
+    height:360px;
+    margin-top:20px;
+    background-color:RGB(38,57,77);
+    float:left;
+}
+    .home_div02_div01
+    {
+        width:334px;
+        height:120px;
+    }
+        .home_div02_div01_div01
+        {
+            width:120px;
+            height:20px;
+            margin-top:10px;
+            margin-left:50px;
+        }
+        .home_div02_h3
+        {
+            
+            color:white;
+            font-family:微软雅黑;
+        }
+        .home_div02_div01_div02
+        {
+            width:120px;
+            height:50px;
+            margin-top:5px;
+            margin-left:50px;
+        }
+        .home_div02_h1
+        {
+            color:white;
+            font-family:微软雅黑;
+            font-size:40px;
+        }
+        .home_div02_div01_div03
+        {
+            width:120px;
+            height:20px;
+            margin-top:5px;
+            margin-left:50px;
+        }
+        .home_div02_h4
+        {
+            color:white;
+            font-family:微软雅黑;
+            font-size:20px;
+        }
+        .home_div02_div01_div04
+        {
+            width:164px;
+            height:120px;
+            position:absolute;
+            top:20px;
+            left:840px;
+        }
+    .home_div02_div02
+    {
+        width:334px;
+        height:120px;
+        background-color:RGB(31,41,51);
+    }
+    .home_div02_div03
+    {
+        width:334px;
+        height:120px;
+    }
+.home_div03
+{
+    width:550px;
+    height:215px;
+    margin-left:20px;
+    position:absolute; 
+    top:255px; 
+    float:left;
+}
+    .home_div03_div01
+    {
+        width:170px;
+        height:215px;
+        background-color:RGB(38,57,77);
+        float:left;
+    }
+    .home_div03_div02
+    {
+        width:170px;
+        height:215px;
+        background-color:RGB(31,41,51);
+        margin-left:20px;
+        float:left;
+    }
+    .home_div03_div03
+    {
+        width:170px;
+        height:215px;
+        background-color:RGB(38,57,77);
+        margin-left:20px;
+        float:left;
+    }
+.home_div04
+{
+    width:265px;
+    height:258px;
+    position:absolute;
+    top:490px;
+    background-color:RGB(38,57,77);
+    margin-left:20px;
+}
+.home_div05
+{
+    width:265px;
+    height:258px;
+    position:absolute;
+    top:490px;
+    left:385px;
+    background-color:RGB(38,57,77);
+}
+    .home_div05_div01
+    {
+        width:265px;
+        height:129px;
+    }
+    .home_div05_div02
+    {
+        width:265px;
+        height:129px;
+        background-color:RGB(31,41,51);
+    }
+.home_div06
+{
+    width:334px;
+    height:348px;
+    background-color:RGB(38,57,77);
+    margin-left:20px;
+    margin-top:20px;
+    position:absolute;
+    top:380px;
+    left:650px;
+}
