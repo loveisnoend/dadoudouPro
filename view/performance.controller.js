@@ -134,6 +134,13 @@ sap.ui.controller("com.zhenergy.bo.view.performance", {
                     data: data
                 }]
             };
+            c.showLoading({
+                    text: "图表数据正在努力加载...",
+                    textStyle: {
+                        color: '#FFF'
+                    }
+                });
+                c.hideLoading();
             c.setOption(option);
 		}
 		//上网电量
@@ -246,6 +253,13 @@ sap.ui.controller("com.zhenergy.bo.view.performance", {
                     data: data
                 }]
             };
+            c.showLoading({
+                    text: "图表数据正在努力加载...",
+                    textStyle: {
+                        color: '#FFF'
+                    }
+                });
+                c.hideLoading();
             c.setOption(option);
 		}
 		
