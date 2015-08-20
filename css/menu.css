@@ -1,6 +1,6 @@
 /*左侧导航栏*/
 
-    #nav_BI{
+    #nav_BI01{
         background-color:green;
     }
     #nav_BI02{
@@ -9,48 +9,100 @@
     #nav_BI03{
         background-color:green;
     }
-    .but01 .but02 .but03{
-        background-color:#007F80;
-        width:90px;
-        height:90px;
+    #nav_BI04{
+        background-color:green;
     }
-    /*第二个按钮所在区域的初始位置*/
+    #nav_BI05{
+        background-color:green;
+    }
+    
+    
+    /*按钮所在区域的初始位置*/
+    .but01{
+        position:absolute;
+        top:184px;
+        left:0px;
+        width:80px;
+        height:80px;
+    } 
     .but02{
         position:absolute;
-        top:80px;
+        top:264px;
         left:0px;
-    }    
+        width:80px;
+        height:80px;
+    } 
     .but03{
         position:absolute;
-        top:160px;
+        top:344px;
         left:0px;
+        width:80px;
+        height:80px;
+    } 
+    .but04{
+        position:absolute;
+        top:424px;
+        left:0px;
+        width:80px;
+        height:80px;
+    }    
+    .but05{
+        position:absolute;
+        top:504px;
+        left:0px;
+        width:80px;
+        height:80px;
     }   
+    /*but里面设计*/
     .But01
     {
-    	background:url('../img/nav-ico-1.png'); 
-    	background-size: cover;
+        background:url('../img/nav-ico-1.png');
+        background-size: cover;
     	border:0px;
-        width:36px; 
-        height:36px; 
-        margin:22px;
+        width: 40px;
+        height: 45px;
+        margin-top: 16px;
+		margin-left:20px;
     }
     .But02
     {
-    	background:url('../img/nav-ico-2.png');
-    	background-size: cover;
+        background:url('../img/nav-ico-2.png'); 
+        background-size: cover;
     	border:0px;
-        width:36px; 
-        height:36px; 
-        margin:22px;
+        width: 40px;
+        height: 45px;
+        margin-top: 16px;
+		margin-left:20px;
     }
     .But03
     {
-    	background:url('../img/nav-ico-3.png');
-    	background-size: cover;
+        background:url('../img/nav-ico-3.png'); 
+        background-size: cover;
     	border:0px;
-        width:36px; 
-        height:36px; 
-        margin:22px;
+        width: 40px;
+        height: 45px;
+        margin-top: 16px;
+		margin-left:20px;
+    }
+    .But04
+    {
+        background:url('../img/nav-ico-4.png'); 
+        background-size: cover;
+    	border:0px;
+        width: 40px;
+        height: 45px;
+        margin-top: 16px;
+		margin-left:20px;
+    }
+    .But05
+    {
+        background:url('../img/nav-ico-5.png'); 
+        background-size: cover;
+    	border:0px;
+        width: 40px;
+        height: 45px;
+        margin-top: 16px;
+		margin-left:20px;
     }
     .nav_left
     {

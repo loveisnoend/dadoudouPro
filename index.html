@@ -14,6 +14,7 @@
 		
 		<script type="text/javascript" src="cordova.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/menu.css">
+		<link rel="stylesheet" type="text/css" href="css/hongguan.css">
 		<link rel="stylesheet" type="text/css" href="css/home.css">
 		<link rel="stylesheet" type="text/css" href="css/performance.css">
 		<script src="echarts-2.2.7/build/dist/echarts.js"></script>
@@ -24,11 +25,11 @@
                     echarts: 'echarts-2.2.7/build/dist'
                 }
             });
-            function doit1() {
+        function doit1() {
             app.to("idhome","show");
         }
         function doit2() {
-            window.location.href = "BI001.html";
+            app.to("idhongguan","show");
         }
         function doit3() {
             app.to("idperformance","show");
@@ -40,9 +41,7 @@
         function doit5() {
             window.location.href = "BI004.html";
         }
-        function doit6() {
-            window.location.href = "BI005.html";
-        }
+        
 
         </script>
         
@@ -98,6 +97,10 @@
 		            //首页
 					var home = sap.ui.view({id:"idhome", viewName:"com.zhenergy.bo.view.home", type:sap.ui.core.mvc.ViewType.HTML  });
 					app.addPage(home);
+					
+					//宏观
+					var hongguan = sap.ui.view({id:"idhongguan", viewName:"com.zhenergy.bo.view.hongguan", type:sap.ui.core.mvc.ViewType.HTML  });
+					app.addPage(hongguan);
 					
 					//经验业绩
 					performance = sap.ui.view({id:"idperformance", viewName:"com.zhenergy.bo.view.performance", type:sap.ui.core.mvc.ViewType.HTML  });
