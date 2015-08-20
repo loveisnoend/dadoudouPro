@@ -494,21 +494,45 @@ sap.ui.controller("com.zhenergy.bo.view.performance", {
 	loadData: function() {
 		var swdl_data = data1[data1.length - 1];
 		var pjswdj_data = data2[data2.length - 1];
-		var sr_data = (swdl_data * pjswdj_data).toFixed(1);
-		var a = 0;
-		var sr_prec = a.toFixed(1);
 		var rlcb_data=data3[data3.length - 1];
 		var qtcb_data=data4[data4.length-1];
-		var cb_data=(rlcb_data+qtcb_data).toFixed(1);
-		var rlr_data=(sr_data-sr_prec).toFixed(1);
+		var a = 1;
+		
+		//收入数据
 		var cb_prec=a.toFixed(1);
+		var sr_data = (swdl_data * pjswdj_data).toFixed(1);
+		var sr_prec = a.toFixed(1);
+		var sr_prec_innerhtml='<span>同比' + sr_prec + '%</span>';
+		if(sr_prec>0){
+		    sr_prec_innerhtml=sr_prec_innerhtml+'<img src="img/arrow-green.png"/>';
+		}else{
+		    sr_prec_innerhtml=sr_prec_innerhtml+'<img src="img/arrow-red.png"/>';
+		}
+		
+		//日利润数据
+		var rlr_data=(sr_data-sr_prec).toFixed(1);
 		var rlr_prec=a.toFixed(1);
+		var rlr_prec_innerhtml='<span>同比' + rlr_prec + '%</span>';
+		if(rlr_prec>0){
+		    rlr_prec_innerhtml=rlr_prec_innerhtml+'<img src="img/arrow-green.png"/>';
+		}else{
+		    rlr_prec_innerhtml=rlr_prec_innerhtml+'<img src="img/arrow-red.png"/>';
+		}
+		
+		//成本数据
+		var cb_data=(rlcb_data+qtcb_data).toFixed(1);
+		var cb_prec_innerhtml='<span>同比' + cb_prec + '%</span>';
+		if(cb_prec>0){
+		    cb_prec_innerhtml=cb_prec_innerhtml+'<img src="img/arrow-green.png"/>';
+		}else{
+		    cb_prec_innerhtml=cb_prec_innerhtml+'<img src="img/arrow-red.png"/>';
+		}
 		document.getElementById('sr_num').innerHTML = sr_data;
-		document.getElementById('sr_prec').innerHTML = '同比' + sr_prec + '%';
+		document.getElementById('sr_prec').innerHTML = sr_prec_innerhtml;
 		document.getElementById('rlr_num').innerHTML=rlr_data;
-		document.getElementById('rlr_prec').innerHTML = '同比' + rlr_prec + '%';
+		document.getElementById('rlr_prec').innerHTML = rlr_prec_innerhtml;
 		document.getElementById('cb_num').innerHTML = cb_data;
-		document.getElementById('cb_prec').innerHTML = '同比' + cb_prec + '%';
+		document.getElementById('cb_prec').innerHTML = cb_prec_innerhtml;
 	}
 	/**
 	 * Called when a controller is instantiated and its View controls (if available) are already created.

@@ -42,16 +42,46 @@
                     color: #FFF;
                 }
 
-                    .page_title .content > div > .panel_title {
+                    .page_title .content > div  .panel_title {
                         border-left: solid #FFF;
                         padding-left: 10px;
                     }
-
-                    .page_title .content > div > .panel_desc {
+.page_title .content > div  .panel_logo{
+    width: 64px;
+  height: 64px;
+  float: left;
+  background-repeat: no-repeat;
+  margin: 10px;
+}
+.page_title .content > div .logo_sr{
+      background: url('../img/1(3).png');
+}
+.page_title .content > div .logo_rlr{
+      background: url('../img/2(1).png');
+}
+.page_title .content > div .logo_cb{
+      background: url('../img/3.png');
+}
+.page_title .content > div  .panel_data{
+margin-top:15px;
+}
+.page_title .content > div  .panel_array{
+width: 10px;
+  height: 16px;
+  display: inline-block;
+}
+                    .page_title .content>div .panel_desc {
                         text-align: center;
                     }
-
-                    .page_title .content > div > .panel_num {
+.page_title .content>div .panel_desc span{
+    vertical-align: top;
+}
+.page_title .content>div .panel_desc img{
+width: 14px;
+  height: 16px;
+  padding-left: 10px;
+}
+                    .page_title .content > div .panel_num {
                         text-align: center;
                         font-size: 40px;
                         line-height: 60px;
