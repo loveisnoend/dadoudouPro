@@ -17,19 +17,35 @@
 		<link rel="stylesheet" type="text/css" href="css/home.css">
 		<link rel="stylesheet" type="text/css" href="css/performance.css">
 		<script src="echarts-2.2.7/build/dist/echarts.js"></script>
+		<script type="text/javascript" src="js/performance.js"></script>
 		<script>
     		require.config({
                 paths: {
                     echarts: 'echarts-2.2.7/build/dist'
                 }
             });
-            function doit1(evt){
-		        app.to("idhome","show");
-            }
-            function doit2(evt){
-		        app.to("idperformance","show");
-            }
+            function doit1() {
+            app.to("idhome","show");
+        }
+        function doit2() {
+            window.location.href = "BI001.html";
+        }
+        function doit3() {
+            app.to("idperformance","show");
+            picClick();
+        }
+        function doit4() {
+            window.location.href = "BI003.html";
+        }
+        function doit5() {
+            window.location.href = "BI004.html";
+        }
+        function doit6() {
+            window.location.href = "BI005.html";
+        }
+
         </script>
+        
 		<script type="text/javascript">
 		  /*=====================================================================
 		   The following onError function is used to trap any errors that occur
@@ -71,6 +87,7 @@
 			
 			
 				sap.ui.localResources("view");
+				var performance;
 				var app = new sap.m.App({initialPage:"idhome"});
 				
 				function startApp(context) {
@@ -83,7 +100,7 @@
 					app.addPage(home);
 					
 					//经验业绩
-					var performance = sap.ui.view({id:"idperformance", viewName:"com.zhenergy.bo.view.performance", type:sap.ui.core.mvc.ViewType.HTML  });
+					performance = sap.ui.view({id:"idperformance", viewName:"com.zhenergy.bo.view.performance", type:sap.ui.core.mvc.ViewType.HTML  });
 					app.addPage(performance);
 					
 					app.to(home);
@@ -135,7 +152,3 @@
 		<div id="content"></div>
 	</body>
 </html>
-	
-
-
-

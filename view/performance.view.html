@@ -1,19 +1,26 @@
 <template data-controller-name="com.zhenergy.bo.view.performance">
+<div id="show" style="width: 1024px; height: 768px">
 	<div class="nav_left">
-        <div class="but01">
-            <button class="But01" type="button"  onClick="doit1()"></button>
-        </div>
-        <div class="but02" id="nav_BI02">
-            <button class="But02" type="button"  onClick="doit2()"></button>
-        </div>
-        <div class="but03">
-            <button class="But03" type="button"  onClick="doit3()"></button>
-        </div>
+        <div class="but01" onclick="doit1()">
+					<button class="But01" type="button" ></button>
+					</div>
+					<div class="but02"  onclick="doit2()">
+						<button class="But02" type="button" ></button>
+					</div>
+					<div class="but03"  id="nav_BI01" onclick="doit3()">
+						<button class="But03" type="button" ></button>
+					</div>
+					<div class="but04" onclick="doit4()">
+						<button class="But04" type="button" ></button>
+					</div>
+					<div class="but05" onclick="doit5()">
+						<button class="But05" type="button" ></button>
+					</div>
     </div>
     <div id="main" class="main">
         <div class="page_title">
             <div class="inner" style="height: 170px; line-height: 170px; width: 916px; margin: auto;">
-                <div class="panel left">
+                <div class="panel left" style="margin-top:30px">
                     <div style="width: 0px; height: 120px; float: right;">
                         <div class="hand_triangle hand_cut_left">
                         </div>
@@ -29,7 +36,7 @@
                     </div>
                     <div class="triangle left_triangle"></div>
                 </div>
-                <div class="panel middle">
+                <div class="panel middle" style="margin-top:30px">
                     <div style="width: 0px; height: 120px; float: left;">
                         <div class="hand_triangle hand_left">
                         </div>
@@ -48,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="panel right">
+                <div class="panel right" style="margin-top:30px">
                     <div style="width: 0px; height: 120px; float: left;">
                         <div class="hand_triangle hand_cut_right">
                         </div>
@@ -67,7 +74,7 @@
                 <div></div>
             </div>
         </div>
-        <div class="page_content">
+        <div class="page_content" style="margin-top:20px">
             <div class="panel left">
                 <div style="height: 10px">
                     <div class="triangle left_triangle cut"></div>
@@ -77,7 +84,7 @@
                     
                 </div>
                 <div class="content">
-                    <div id="swdl" class="line" style="width: 440px; height: 228px">
+                    <div id="swdl" class="line" style="width: 440px; height: 228px" onclick="mainClick01()">
                     </div>
                 </div>
                 <div style="position: absolute; bottom: 0; height: 0px;width: 440px;">
@@ -92,14 +99,14 @@
                     燃料成本
                 </div>
                 <div class="content">
-                    <div id="rlcb" class="line" style="width: 440px; height: 228px">
+                    <div id="rlcb" class="line" style="width: 440px; height: 228px" onclick="mainClick()">
                     </div>
                 </div>
                 <div style="position: absolute; bottom: 0; height: 0px;width: 440px;">
                 
                 <div class="triangle right_triangle"></div></div>
             </div>
-            <div class="panel left">
+            <div class="panel left"  style="margin-top:20px">
                 <div style="height: 10px">
                     <div class="triangle left_triangle cut"></div>
                 </div>
@@ -112,7 +119,7 @@
                 </div>
 
             </div>
-            <div class="panel right">
+            <div class="panel right" style="margin-top:20px">
                 <div style="height: 10px">
                     <div class="triangle right_triangle cut "></div>
                 </div>
@@ -125,5 +132,42 @@
                 </div>
             </div>
         </div>
+    </div>
+    </div>
+    <div id="hidden" style="display: none;">
+        <div id="detail" style="width: 1024px; height: 768px;">
+            <div class="nav_left">
+                <div class="but01"   onclick="doit1()">
+					<button class="But01" type="button" ></button>
+					</div>
+					<div class="but02"  onclick="doit2()">
+						<button class="But02" type="button" ></button>
+					</div>
+					<div class="but03"  id="nav_BI" onclick="doit3()">
+						<button class="But03" type="button" ></button>
+					</div>
+					<div class="but04" onclick="doit4()">
+						<button class="But04" type="button" ></button>
+					</div>
+					<div class="but05" onclick="doit5()">
+						<button class="But05" type="button" ></button>
+					</div>
+					<!-- <div class="but06" onclick="doit6()">
+						<button class="But06" type="button" ></button>
+					</div> -->
+            </div>
+            <div class="BI02_main">
+                <div class="BI02_div01" id="div01"></div>
+                <div class="BI02_div02" id="div02"></div>
+                <div class="BI02_div03" id="div03"></div>
+            </div>
+
+        </div>
+    </div>
+    <div id="hidden01" style="display: none;">
+        <div style="background-color:#344C66;width: 1024px; height: 768px;" onclick="picClick()">
+        <div id="detail01" style="width: 1000px; height: 600px;margin:auto;padding-top:100px">
+        </div>
+            </div>
     </div>
 </template>
