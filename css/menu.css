@@ -1,20 +1,9 @@
 /*左侧导航栏*/
 
-    #nav_BI01{
+    .nav_BI{
         background-color:green;
     }
-    #nav_BI02{
-        background-color:green;
-    }
-    #nav_BI03{
-        background-color:green;
-    }
-    #nav_BI04{
-        background-color:green;
-    }
-    #nav_BI05{
-        background-color:green;
-    }
+    
     
     
     /*按钮所在区域的初始位置*/
